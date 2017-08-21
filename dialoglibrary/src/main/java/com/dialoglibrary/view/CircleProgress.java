@@ -13,7 +13,7 @@ import android.view.View;
  * Created by admin on 2017-08-17.
  */
 
-public class CircleProgressView extends View {
+public class CircleProgress extends View {
     private static final String TAG = "CircleProgressBar";
 
     private int mMaxProgress = 100;
@@ -35,7 +35,7 @@ public class CircleProgressView extends View {
 
     private String mTxtHint2;
 
-    public CircleProgressView(Context context, AttributeSet attrs) {
+    public CircleProgress(Context context, AttributeSet attrs) {
         super(context, attrs);
         mContext = context;
         mRectF = new RectF();
@@ -68,7 +68,7 @@ public class CircleProgressView extends View {
 
         // 绘制圆圈，进度条背景
         canvas.drawArc(mRectF, -90, 360, false, mPaint);
-        mPaint.setColor(Color.rgb(0xf8, 0x60, 0x30));
+        mPaint.setColor(Color.BLUE);
         canvas.drawArc(mRectF, -90, ((float) mProgress / mMaxProgress) * 360, false, mPaint);
 
         // 绘制进度文案显示
